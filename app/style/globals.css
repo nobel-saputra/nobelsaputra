@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff; /* full putih */
+  --foreground: #171717; /* teks gelap */
+
+  /* font utama */
+  --font-poppins: "Poppins", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-poppins);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* tetap putih walau dark mode aktif */
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+/* biar semua elemen default ikut putih */
+html, body, #__next {
+  height: 100%;
+  background-color: #ffffff;
+}
+
+/* opsional: buat shadow atau border kelihatan jelas di background putih */
+* {
+  box-sizing: border-box;
+}
