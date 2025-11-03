@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-white text-xl font-semibold hover:text-gray-300 transition-colors z-50">
-            NOBEL
+            Nobel
           </Link>
 
           {/* Desktop Navigation */}

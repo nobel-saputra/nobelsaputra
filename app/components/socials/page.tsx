@@ -1,14 +1,14 @@
 "use client";
 
 import "../../style/animation.css";
-import { Instagram, Github, Dribbble, Facebook, ArrowRight } from "lucide-react";
+import { Instagram, Github, Dribbble, Linkedin, ArrowRight } from "lucide-react";
 
 export default function SocialMediaCard() {
   const socialMedia = [
     { name: "Instagram", icon: Instagram, link: "https://instagram.com/nobel_852" },
     { name: "Github", icon: Github, link: "https://github.com/nobel-saputra" },
     { name: "Dribbble", icon: Dribbble, link: "https://dribbble.com/nobelsaputra" },
-    { name: "Facebook", icon: Facebook, link: "https://facebook.com/ndsuajkbfjkdsabfhjkds" },
+    { name: "LinkedIn", icon: Linkedin, link: "https://www.linkedin.com/in/i-made-nobel-saputra-5a0809368/" },
   ];
 
   return (
