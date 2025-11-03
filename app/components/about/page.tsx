@@ -10,7 +10,7 @@ export default function AboutPage() {
         {/* Mobile Layout */}
         <div className="md:hidden text-white text-center">
           <h1 className="text-2xl font-bold mb-2 animate-fade-in-up-1">About Me</h1>
-          <p className="text-md font-medium text-gray-300 mb-6 text-justify mt-5 animate-fade-in-up-2">I&apos;m a full-stack web developer who loves building all kinds of websites e-commerce, portfolios, apps, and anything that brings new ideas to life.</p>
+          <p className="text-md font-medium text-gray-300 mb-6 text-justify mt-5 animate-fade-in-up-2">I&apos;m a full-stack web developer who loves building all kinds of websites | e-commerce, portfolios, apps, and anything that brings new ideas to life.</p>
           <div className="pt-4 flex items-center gap-4 mb-8 animate-slide-in">
             <div className="w-2 h-10 bg-white rounded-full"></div>
             <p className="text-md lg:text-xl font-medium text-gray-300">My Skill</p>
