@@ -7,8 +7,8 @@ export default function IntroCard() {
       <div className="card-container bg-[#212529] rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 lg:p-16 max-w-6xl w-full shadow-2xl">
         {/* Mobile Layout */}
         <div className="md:hidden text-white text-left">
-          <h1 className="text-xl lg:text-6xl font-medium animate-fade-in-up-1">Hello</h1>
-          <h2 className="text-pxl lg:text-6xl font-medium animate-fade-in-up-2">My Name is</h2>
+          <h1 className="text-sm lg:text-6xl font-medium animate-fade-in-up-1">Hello</h1>
+          <h2 className="text-sm lg:text-6xl font-medium animate-fade-in-up-2">My Name is</h2>
           <h1 className="text-2xl font-bold mb-2 animate-fade-in-up-1">I Made Nobel Saputra</h1>
           <p className="text-md font-medium text-gray-300 mb-6 animate-fade-in-up-2">Full-Stack Web Developer</p>
         </div>
