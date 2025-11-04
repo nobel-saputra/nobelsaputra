@@ -61,7 +61,7 @@ export default function PortfolioPage() {
         {/* Portfolio Grid */}
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {portfolios.map((item, index) => (
-            <div key={item.id} className="portfolio-card group" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div key={item.id} className="border-gray-500 border-2 portfolio-card group" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="relative w-full h-72 overflow-hidden rounded-t-xl">
                 <Image src={item.image_url} alt={item.title} fill className="object-contain bg-[#1a1d21] transition-transform duration-500 group-hover:scale-105" />
               </div>
