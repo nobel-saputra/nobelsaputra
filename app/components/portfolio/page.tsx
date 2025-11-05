@@ -35,7 +35,7 @@ export default function PortfolioPage() {
 
   if (loading)
     return (
-      <div className="min-h-screen bg-[#212529] flex items-center justify-center">
+      <div className="min-h-screen rounded-2xl bg-[#212529] flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
           <div className="loader"></div>
           <p className="text-white text-lg">Loading portfolios...</p>
