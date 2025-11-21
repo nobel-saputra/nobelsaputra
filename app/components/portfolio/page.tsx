@@ -12,11 +12,14 @@ interface Portfolio {
   image_url: string;
   live_url: string;
   github_url: string;
+  jenis: string;
+  created_at: string;
 }
 
 export default function PortfolioPage() {
   const [portfolios, setPortfolios] = useState<Portfolio[]>([]);
   const [loading, setLoading] = useState(true);
+  const [expandedCards, setExpandedCards] = useState<{ [key: string]: boolean }>({});
 
   useEffect(() => {
     const fetchPortfolios = async () => {
@@ -32,6 +35,17 @@ export default function PortfolioPage() {
 
     fetchPortfolios();
   }, []);
+
+  const toggleExpand = (id: string) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
+  const isLongDescription = (description: string) => {
+    return description.length > 150;
+  };
 
   if (loading)
     return (
@@ -68,7 +82,21 @@ export default function PortfolioPage() {
 
               <div className="p-6 space-y-4">
                 <h2 className="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors">{item.title}</h2>
-                <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">{item.description}</p>
+                <h2 className="text-sm font-bold text-gray-400 group-hover:text-gray-300 transition-colors">{item.jenis}</h2>
+                
+                <div>
+                  <p className={`text-gray-400 text-sm leading-relaxed break-words ${!expandedCards[item.id] && isLongDescription(item.description) ? 'line-clamp-3' : ''}`}>
+                    {item.description}
+                  </p>
+                  {isLongDescription(item.description) && (
+                    <button
+                      onClick={() => toggleExpand(item.id)}
+                      className="text-white text-sm font-semibold mt-2 hover:text-gray-300 transition-colors block"
+                    >
+                      {expandedCards[item.id] ? 'Show Less' : 'Read More'}
+                    </button>
+                  )}
+                </div>
 
                 <div className="flex gap-3 pt-2">
                   {item.live_url && (
@@ -142,9 +170,9 @@ export default function PortfolioPage() {
           }
         }
 
-        .line-clamp-2 {
+        .line-clamp-3 {
           display: -webkit-box;
-          -webkit-line-clamp: 2;
+          -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
